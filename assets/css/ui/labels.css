@@ -1,0 +1,96 @@
+.label-container {
+    width: 102mm;
+    height: 76mm;
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 4mm 6mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    color: #000;
+    margin: auto;
+}
+
+.company {
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2mm;
+    font-size: 12pt;
+}
+
+.info div span {
+    font-weight: bold;
+}
+
+.format-number {
+    border: 1px dashed #000;
+    text-align: center;
+    font-size: 10pt;
+    padding: 1mm;
+    margin-top: 3mm;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 10pt;
+}
+
+.qr {
+    width: 25mm;
+    height: 25mm;
+    border: 1px solid #000;
+    background: #f9f9f9;
+}
+
+/* Escala reducida para el modal */
+.preview-scale {
+    transform: scale(0.7);
+    transform-origin: top center;
+}
+
+/* Reglas de impresión */
+@media print {
+    @page {
+        size: 102mm 76mm;
+        /* Tamaño real de etiqueta */
+        margin: 0 !important;
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 102mm;
+        height: 76mm;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #printArea,
+    #printArea * {
+        visibility: visible;
+    }
+
+    #printArea {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 102mm;
+        height: 76mm;
+        overflow: hidden;
+        page-break-after: avoid;
+    }
+}

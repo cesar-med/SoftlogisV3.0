@@ -1,0 +1,29 @@
+services:
+  mysql:
+    image: mysql:8.0.40
+    container_name: softlogisV3
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: production25
+      MYSQL_DATABASE: roles
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpass
+      TZ: America/Mexico_City
+    ports:
+      - "3344:3306"
+    volumes:
+      - mysql_data_v3:/var/lib/mysql
+
+  apache:
+    build: .
+    container_name: apache_server_v3
+    restart: always
+    ports:
+      - "8084:80"
+    volumes:
+      - ./html:/var/www/html
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data_v3:

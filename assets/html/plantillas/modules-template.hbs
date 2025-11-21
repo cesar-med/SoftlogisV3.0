@@ -1,0 +1,17 @@
+{{#each permisos}}
+<div class="modulesName {{#if isActive}}modulesNameActive{{/if}}" data-module="{{@key}}">
+  <div class="contentNameModule">
+    <div class="imgModule {{this.0.class}} {{#if isActive}}imgModuleActive{{/if}}"></div>
+    <div class="textModule">{{@key}}</div>
+  </div>
+  <div class="contentFunctionModule" style="{{styleIfHidden hasActiveFunction}}">
+    {{#each this}}
+    <div class="contentNameFunction" data-functionModule="{{id}}">
+      <a href="{{path}}" class="textModule {{#if isFunctionActive}}contentFunctionActive{{/if}}">
+        {{funcion}}
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/each}}

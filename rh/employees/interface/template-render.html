@@ -1,0 +1,46 @@
+<script id="user-table-template" type="text/x-handlebars-template">
+    <table id="employeesTable">
+        <thead>
+            <tr>
+                <th class="columnLgTable textLeft">Nombre</th>
+                <th class="columnMdTable">Departamento</th>
+                <th class="columnMdTable">Puesto</th>
+                <th class="columnMdTable">Correo</th>
+                <th class="columnMdTable">Teléfono</th>
+                <th class="columnSmTable">Ingreso</th>
+                <th class="columnSmTable">Estatus</th>
+                <th class="columnFunctionTable"></th>
+                <th class="columnFunctionTable"></th>
+            </tr>
+        </thead>
+        <tbody class="tableRegistersPages">
+            {{#each data}}
+            <tr>
+                <td class="textLeft">{{this.name}}</td>
+                <td>{{this.department}}</td>
+                <td>{{this.position}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone_number}}</td>
+                <td>{{this.date_joining}}</td>
+                <td>
+                    {{#if (eq this.status true)}}
+                    Activo
+                    {{else}}
+                    Baja
+                    {{/if}}
+                </td>
+                <td>
+                    <button type="button" class="btnFunctionTable" value="{{this.uuid}}">
+                        <i class="fa-solid fa-pen btnEditRegister"></i>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btnFunctionTable" value="{{this.uuid}}">
+                        <i class="fa-solid fa-folder-open btnRecord"></i>
+                    </button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</script>

@@ -1,0 +1,20 @@
+{{#each filters}}
+<div class="elementFilterHeaderComplete">
+    <div class="filterHeaderTitle">
+        <span class="searchIcon"></span>
+        <label for=""><strong>{{label}}</strong></label> <!-- Cambiado a @key -->
+    </div>
+    <div class="contentDataHeader max-filter-height" data-type="{{identifier}}">
+        {{#each data}} <!-- Recorremos el arreglo data -->
+        <div class="elementCatalog filterData" data-id="{{id}}" data-value="{{id}}" title="{{description}}"
+            data-content="{{description}}">
+            <label class="custom-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                {{description}}
+            </label>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/each}}

@@ -1,0 +1,36 @@
+<script id="user-table-template" type="text/x-handlebars-template">
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th data-value="nombre">Nombre</th>
+                <th data-value="correo">Correo</th>
+                <th data-value="telefono">Teléfono</th>
+                <th data-value="rol">Rol</th>
+                <th data-value="estatus">Estatus</th>
+                <th data-value="" class="columnFunctionTable"></th>
+            </tr>
+        </thead>
+        <tbody class="tableRegistersPages">
+            {{#each data}}
+            <tr>
+                <td>{{this.nombre}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone_number}}</td>
+                <td>{{this.rol}}</td>
+                <td>
+                    {{#if (eq this.status true)}}
+                    Activo
+                    {{else}}
+                    Baja
+                    {{/if}}
+                </td>
+                <td>
+                    <button type="button" class="btnFunctionTable" value="{{this.uuid}}">
+                        <i class="fa-solid fa-pen btnEditRegister"></i>
+                    </button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</script>

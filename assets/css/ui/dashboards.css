@@ -1,0 +1,98 @@
+/* :root {
+    --background: #E6E4DC;
+    --backgroundInputs: #e7e7e7;
+    --toneBluePrimary: #1e2b40;
+    --toneBlueTextSoftButtons: #3b82f6;
+    --toneGreyBorders: #94a3b8;
+    --toneGreyBackground: #f1f5f9;
+    --toneGreyTextPrimary: #0f172a;
+    --toneGreyTextSoft: #64748b;
+    --toneWhite: #FFF;
+    --toneIcons: #11599c;
+} */
+
+.width-full {
+    width: 100%;
+}
+
+.cardReportHeader {
+    border-radius: 7px;
+    background-color: var(--backgroundInputs);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.cardReportHeader span {
+
+    font-size: 1.2rem;
+}
+
+.flex-center-row {
+
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.flex-center-column {
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.table-dashboard {
+
+    border-spacing: 0px !important;
+}
+
+.table-dashboard thead tr {
+    background-color: var(--backgroundInputs) !important;
+    height: 15px !important;
+}
+
+.table-dashboard tbody tr {
+    padding: 0px !important;
+    height: 10px !important;
+    box-shadow: none !important;
+}
+
+.table-dashboard thead tr th {
+    padding: 6px 10px !important;
+    color: var(--toneBluePrimary) !important;
+
+}
+
+.table-dashboard thead tr :first-child {
+    text-align: left !important;
+}
+
+.table-dashboard tbody tr td {
+    padding: 2px 10px !important;
+    color: var(--toneBluePrimary) !important;
+}
+
+.chart-wrap {
+    max-width: 100%;
+    max-height: 155px;
+}
+
+.chart-wrap-line {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 300px;
+    min-height: 300px;
+    text-align: center;
+}
